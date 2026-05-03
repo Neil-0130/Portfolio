@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --background: #111111;
+  --surface: #f5f5f0;
+  --surface-2: #1f1f1f;
+  --text: #f5f5f0;
+  --muted: #c7c7c7;
+  --brand: #fb8c00;
+  --brand-soft: #ffb56c;
+  --shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background: #0c0c0c;
+  color: var(--text);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+::selection {
+  background: rgba(251, 140, 0, 0.35);
+  color: #111111;
+}
+
+.card-surface {
+  background: rgba(245, 245, 240, 0.08);
+  border: 1px solid rgba(245, 245, 240, 0.12);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+}
